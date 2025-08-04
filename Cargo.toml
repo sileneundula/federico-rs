@@ -1,3 +1,7 @@
+[workspace]
+resolver = "3"
+members = ["federico-server", "federico-storage"]
+
 [package]
 name = "federico-rust"
 version = "0.1.0"
@@ -7,3 +11,4 @@ edition = "2024"
 serde_json = "1.0.141"
 serde = "1.0.0"
 json-ld = "0.21.2"
+url = "2.5.4"

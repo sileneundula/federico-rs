@@ -141,4 +141,23 @@ pub trait Activity {
     /// 
     /// Retrieves the summary of the activity
     fn summary(&self) -> String;
+    /// # id Trait
+    /// 
+    /// Retrieves the id of the activity
+    fn id(&self) -> String;
+}
+
+/// # ActivityStreams Visualize: A Method of Visualizing Data For ActivityPub/ActivityStreams2.0
+/// 
+/// This trait implements functionality for visualization.
+pub trait ActivityStreamsVisualize {
+    /// # Visualize ActivityStreams
+    /// 
+    /// Creates a visualization of the Activity Streams data.
+    fn visualize(&self) -> String;
+}
+
+pub trait Properties {
+    fn add_property(&mut self) -> Self;
+    fn property(&mut self);
 }

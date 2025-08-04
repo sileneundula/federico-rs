@@ -11,3 +11,6 @@ pub const CHARACTER_ENCODING: &str = "UTF-8";
 pub const CONTEXT_PROPERTY: &str = "@context";
 
 pub const DATEANDTIME: &str = "RFC3339";
+
+pub const ALTERNATIVE_CONTENT_TYPE: &str = "application/activity+json";
+pub const CONTENT_TYPE: &str = "application/ld+json; profile=\"https://www.w3.org/ns/activitystreams";

@@ -2,6 +2,10 @@
 //! 
 //! Distributed Event Log (DEL)
 //! 
+//! 
+//! ## HashSet
+//! 
+//! Use a hashset to create new activity.
 
 use crate::properties::Properties;
 
@@ -9,6 +13,12 @@ use crate::properties::Properties;
 pub struct Activity {
     pub activity_type: ActivityTypes, // Semenatics: type
     pub properties: Option<Vec<Properties>>,
+}
+
+impl Activity {
+    pub fn new(activity_type: ActivityTypes, properties: Vec<Properties>) {
+        
+    }
 }
 
 pub struct ActivityParser {
@@ -35,6 +45,9 @@ impl ActivityParser {
     }
 }
 
+/// # ActivityParserType
+/// 
+///
 pub enum ActivityParserType {
     Federico, // Default
     Other(String),
@@ -84,7 +97,7 @@ pub struct ActivityTypesProducer {
 }
 
 impl ActivityTypesProducer {
-    pub fn new(activity_type: ActivityTypes) {
+    pub fn new(activity_type: ActivityTypes) -> Self {
         return Self {
             ActivityType: activitytype,
         }

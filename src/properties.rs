@@ -1,7 +1,11 @@
+
+use url::Url;
+use crate::actor::Actor;
+
 pub enum Properties {
-    ID,
+    ID(Url), // id: 
     TYPE,
-    ACTOR,
+    ACTOR(Actor),
     ATTACHMENT,
     ATTRIBUTEDTO,
     AUDIENCE,
@@ -64,4 +68,17 @@ pub enum Properties {
     OTHER(String),
 }
 
-pub struct AddProperty
+pub struct AddProperty;
+
+impl AddProperty {
+    pub fn new(property: Properties, value: String) {
+        match property {
+            Properties::ID => 
+            _ => panic!("Not Implemented")
+        }
+    }
+    /// URL
+    fn id(id: Url) -> Url {
+        return id
+    }
+}
